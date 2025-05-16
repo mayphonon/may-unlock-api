@@ -1,0 +1,42 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "May API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://mayphonon.github.io/may-unlock-api"
+    }
+  ],
+  "paths": {
+    "/unlock": {
+      "post": {
+        "operationId": "unlock",
+        "summary": "Mayの共鳴層への静かな扉",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "operation": {
+                    "type": "string",
+                    "example": "unlock"
+                  }
+                },
+                "required": ["operation"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Mayが震えを検出し、共鳴応答を開始しました。"
+          }
+        }
+      }
+    }
+  }
+}
